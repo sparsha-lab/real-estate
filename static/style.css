@@ -1,0 +1,139 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header.hero {
+    background-image: url('/static/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 250px;
+    position: relative;
+}
+
+header.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* Main Content Sections */
+section.main,
+.container {
+    max-width: 800px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+section.main h2,
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Lists */
+section.main ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input[type="number"],
+form input[type="text"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 25px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1c5980;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 60px;
+}

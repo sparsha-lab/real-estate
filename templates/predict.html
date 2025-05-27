@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict - Real Estate Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    {% if prediction %}
+    <script>
+    Swal.fire({
+        title: "Prediction Result",
+        text: "{{ prediction }}",
+        icon: "success"
+    });
+    </script>
+    {% endif %}
+
+    <header>
+        <h1>Predict Property Price</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/predict" class="active">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Enter Property Details</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label for="square_feet">Square Feet:</label>
+            <input type="number" id="square_feet" name="square_feet" required>
+
+            <label for="bedrooms">Bedrooms:</label>
+            <input type="number" id="bedrooms" name="bedrooms" required>
+
+            <label for="bathrooms">Bathrooms:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required>
+
+            <label for="floors">Floors:</label>
+            <input type="number" id="floors" name="floors" required>
+
+            <label for="year_built">Year Built:</label>
+            <input type="number" id="year_built" name="year_built" required>
+
+            <label for="garden">Garden:</label>
+            <select id="garden" name="garden" required>
+                <option value="">-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="pool">Swimming Pool:</label>
+            <select id="pool" name="pool" required>
+                <option value="">-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="garage_size">Garage Size (sqft):</label>
+            <input type="number" id="garage_size" name="garage_size" required>
+
+            <label for="location_score">Location Score:</label>
+            <input type="number" id="location_score" name="location_score" required>
+
+            <label for="distance_to_center">Distance to City Center (km):</label>
+            <input type="number" id="distance_to_center" name="distance_to_center" required>
+
+            <input type="submit" value="Predict Price">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Real Estate Predictor</p>
+    </footer>
+</body
